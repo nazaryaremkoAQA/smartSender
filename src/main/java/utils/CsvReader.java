@@ -11,7 +11,7 @@ public class CsvReader {
         try {
             return new CsvToBeanBuilder<>(new FileReader(fileName))
                     .withType(clazz)
-                    .withFilter(id -> id[0].equals(value))
+                    .withFilter(id -> id[0].trim().equals(value))
                     .build().parse();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
