@@ -1,0 +1,29 @@
+Positive:
+1
+  Go to Account Settings-> User, try change email, password, firstName, lastName, language, try to add google aut
+  Expected result: data is updated
+2
+  Go to Account Settings-> Account, try change/add Account logo, timezone, ip
+  Expected result: data is updated
+3
+  Go to Account Settings-> Teammates, try invite Teammate
+  Expected result: data is updated
+4
+  Go to Account Settings-> Security, try to generate new token
+  Expected result: data is updated
+5
+  Go to Account Settings-> Security, try to log out
+  Expected result: user is log out
+
+Negative:
+1
+  Go to Account Settings-> User, try change email, password, firstName, lastName, language with incorrect data
+  Expected result: data is not updated, error appears
+2
+  Go to Account Settings-> Account, try change/add Account logo with incorrect data, timezone, ip
+  Expected result: data is not updated, error appears
+3
+  Go to Account Settings-> Teammates, try invite Teammate with incorrect data
+  Expected result: data is not updated, error appears
+
+

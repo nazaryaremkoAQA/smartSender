@@ -1,0 +1,58 @@
+Positive:
+1
+ enter all valid data( firstname, lastname, email, password)
+ agry with policy
+ click Sign Up
+ Expected result:Thank you for signing up with SmartSender!
+ Go to email and confirm registration
+ Go to site
+ Expected result: User can login
+
+Negative:
+1
+ enter all valid data(lastname, email, password) except firstname
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+2
+ enter all valid data(firstname, email, password) except lastname
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+3
+ enter all valid data(firstname, email, lastname) except password
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+4
+ enter all valid data(firstname, password, lastname) except email
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+5
+ enter all valid data with incorrect password
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+6
+ enter all valid data with incorrect firstName
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+7
+ enter all valid data with incorrect lastname
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+8
+ enter all valid data with incorrect email
+ agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+9
+ enter all valid data
+ dont click agry with policy
+ click Sign Up
+ Expected result: pop-up error message appears
+
+
