@@ -34,13 +34,11 @@ public class UpdateContacts {
         contact.setCac((Contact.Cac) csvReader.getCsvData(CSV_CAC, test1, Contact.Cac.class).get(0));
         contactData.setContacts(contacts);
         args.put("jsonBody", new GsonBuilder().create().toJson(contactData));
-        args.put("partUrl", "/contacts/update");
-        args.put("accessToken", "NzdiZmZjYTBiNDZiYmNjZGY2ZjE4MjkwNTZjMmM2NjU=");
     }
 
     @Test()
     public void updateContact() {
-        Map<String, Object> result = Runner.runFeature(new File(SRC_TEST_JAVA + File.separator + "UpdateContact.feature"), args, false);
+        Map<String, Object> result = Runner.runFeature(new File(SRC_TEST_JAVA + File.separator + "UpdateContact.feature"), args, true);
         ResponseUpdate response = gson.fromJson(result.get("response").toString(), ResponseUpdate.class);
         String requestId = response.getRequestId();
         Assertions.assertEquals(response.getResult(), true);
