@@ -27,8 +27,8 @@ public class UpdateContacts {
         args = new HashMap();
         csvReader = new CsvReader();
 
-        contactData = (ContactData) csvReader.getCsvData(CSV_CONTACT_DATA, test1,ContactData.class).get(0);
-        List<Contact> contacts = csvReader.getCsvData(CSV_CONTACT, test1,Contact.class);
+        contactData = (ContactData) csvReader.getCsvData(CSV_CONTACT_DATA, test1, ContactData.class).get(0);
+        List<Contact> contacts = csvReader.getCsvData(CSV_CONTACT, test1, Contact.class);
         Contact contact = contacts.get(0);
         contact.setVariables(csvReader.getCsvData(CSV_VARIABLES, test1, Contact.Variables.class));
         contact.setCac((Contact.Cac) csvReader.getCsvData(CSV_CAC, test1, Contact.Cac.class).get(0));

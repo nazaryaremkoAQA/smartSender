@@ -14,7 +14,8 @@ public class CsvReader {
                     .withFilter(id -> id[0].equals(value))
                     .build().parse();
         } catch (FileNotFoundException e) {
-            return null;
+            e.printStackTrace();
+            throw new RuntimeException();
         }
-     }
+    }
 }
